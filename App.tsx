@@ -4,6 +4,7 @@ import React from 'react';
 import LoginScreen from './screens/LoginScreen';
 import WelcomeGestor from './screens/WelcomeGestor';
 import WelcomeEntregador from './screens/WelcomeEntregador';
+import CriarTarefa from './screens/CriarTarefa';
 import { RootStackParamList } from './screens/types';
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -15,6 +16,7 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="WelcomeGestor" component={WelcomeGestor} />
         <Stack.Screen name="WelcomeEntregador" component={WelcomeEntregador} />
+        <Stack.Screen name="CriarTarefa" component={CriarTarefa} />
       </Stack.Navigator>
     </NavigationContainer>
   );
