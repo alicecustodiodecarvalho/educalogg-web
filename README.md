@@ -1,50 +1,127 @@
-# Welcome to your Expo app 👋
+Projeto: App de Gerenciamento de Entregas
+Descrição
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este é um aplicativo de gerenciamento de entregas desenvolvido em React Native.
+O app possui dois perfis de usuário: Entregador e Gestor, com telas de login e dashboards distintos, oferecendo funcionalidades específicas para cada perfil.
 
-## Get started
+Funcionalidades
+Gestor
 
-1. Install dependencies
+Mensagem de boas-vindas personalizada.
 
-   ```bash
-   npm install
-   ```
+Resumos e alertas do dia em cards.
 
-2. Start the app
+Botões para:
 
-   ```bash
-   npx expo start
-   ```
+Entregas
 
-In the output, you'll find options to open the app in a
+Entregadores
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Relatórios
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Notificações
 
-## Get a fresh project
+Configuração
 
-When you're ready, run:
+Sair
 
-```bash
-npm run reset-project
-```
+Entregador
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Mensagem de boas-vindas personalizada:
+“Olá, [nome]! Pronto para as entregas de hoje?”
 
-## Learn more
+Lista resumida das próximas entregas do dia, com cards mostrando:
 
-To learn more about developing your project with Expo, look at the following resources:
+Endereço
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Status (pendente, concluída, atrasada)
 
-## Join the community
+Horário
 
-Join our community of developers creating universal apps.
+Nome do destinatário
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Ícone de status colorido
+
+Botões para cada entrega:
+
+Ver detalhes
+
+Concluir entrega
+
+Reportar problema
+
+Resumo rápido de entregas do dia:
+
+Total
+
+Concluídas
+
+Pendentes
+
+Botão de Logout
+
+Estrutura do Projeto
+educalogg-web/
+│
+├─ screens/
+│   ├─ LoginScreen.tsx
+│   ├─ WelcomeGestor.tsx
+│   ├─ WelcomeEntregador.tsx
+│   └─ types.ts
+│
+├─ assets/
+│   └─ images/  (logos, ícones)
+│
+├─ App.tsx
+
+Tecnologias Utilizadas
+
+React Native (sem Expo)
+
+TypeScript
+
+React Navigation (stack)
+
+FlatList e ScrollView para listas e rolagem
+
+Componentes básicos do React Native (View, Text, Button, TextInput)
+
+Pré-requisitos
+
+Node.js >= 18
+
+npm
+
+Android Studio ou emulador iOS/Android configurado (ou dispositivo físico)
+
+VSCode ou outro editor de código
+
+Passo a passo para rodar o projeto
+
+Clonar o repositório
+
+git clone <https://github.com/alicecustodiodecarvalho/educalogg-web.git>
+cd <educalogg-web>
+
+
+Instalar dependências
+
+npm install
+
+
+Instalar dependências adicionais do React Native
+
+npm install @react-navigation/native @react-navigation/stack
+npm install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
+npm install --save-dev @types/react @types/react-native
+
+
+Rodar o projeto no emulador ou dispositivo físico
+
+npx react-native run-android  # Para Android
+npx react-native run-ios      # Para iOS (macOS)
+
+
+Se houver problema de cache ou erros de import, rode:
+
+npx react-native start --reset-cache
