@@ -23,20 +23,29 @@ export default function WelcomeGestor({ navigation, route }: Props) {
       <View style={styles.card}><Text style={styles.cardText}>Alertas recentes</Text></View>
 
       <View style={styles.buttonContainer}>
-        <Button title="Entregas" onPress={() => {}} color="#1E90FF" />
+        <Button title="Entregas" onPress={() => { }} color="#1E90FF" />
       </View>
       <View style={styles.buttonContainer}>
-        <Button title="Entregadores" onPress={() => {}} color="#1E90FF" />
+        <Button title="Entregadores" onPress={() => { }} color="#1E90FF" />
       </View>
       <View style={styles.buttonContainer}>
-        <Button title="Relatórios" onPress={() => {}} color="#1E90FF" />
+        <Button title="Relatórios" onPress={() => { }} color="#1E90FF" />
       </View>
       <View style={styles.buttonContainer}>
-        <Button title="Notificações" onPress={() => {}} color="#1E90FF" />
+        <Button title="Notificações" onPress={() => { }} color="#1E90FF" />
       </View>
       <View style={styles.buttonContainer}>
-        <Button title="Configuração" onPress={() => {}} color="#1E90FF" />
+        <Button title="Configuração" onPress={() => { }} color="#1E90FF" />
       </View>
+      
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Gerenciar Contatos"
+          onPress={() => navigation.navigate('Contatos')}
+          color="#1E90FF"
+        />
+      </View>
+
       <View style={styles.buttonContainer}>
         <Button title="Sair" onPress={() => navigation.navigate('Login')} color="red" />
       </View>

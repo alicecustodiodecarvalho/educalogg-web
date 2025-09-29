@@ -6,6 +6,7 @@ import WelcomeGestor from './screens/WelcomeGestor';
 import WelcomeEntregador from './screens/WelcomeEntregador';
 import CriarTarefa from './screens/CriarTarefa';
 import { RootStackParamList } from './screens/types';
+import ContatosScreen from './screens/ContatosScreen';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -17,6 +18,7 @@ export default function App() {
         <Stack.Screen name="WelcomeGestor" component={WelcomeGestor} />
         <Stack.Screen name="WelcomeEntregador" component={WelcomeEntregador} />
         <Stack.Screen name="CriarTarefa" component={CriarTarefa} />
+        <Stack.Screen name="Contatos" component={ContatosScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
